@@ -1,4 +1,4 @@
-package com.bresan.glass.examples.CameraExample;
+package com.bresan.glass.examples.AccelerometerExample;
 
 import java.text.DecimalFormat;
 
@@ -85,7 +85,7 @@ public class AccelerometerActivity extends Activity {
 
 			DecimalFormat df = new DecimalFormat("0.0");
 
-			// Update the text views with the read positions
+			// update the text views with the read data from sensor
 			txtX.setText(df.format(gravity[xPos]));
 			txtY.setText(df.format(gravity[1]));
 			txtZ.setText(df.format(gravity[2]));

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bresan.glass.examples.CameraExample"
+    package="com.bresan.glass.examples.AccelerometerExample"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -12,11 +12,14 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
-            android:name="com.bresan.glass.examples.CameraExample.CameraActivity"
+            android:name="com.bresan.glass.examples.AccelerometerExample.AccelerometerActivity"
             android:label="@string/app_name"
             android:theme="@style/MenuTheme" >
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="com.bresan.glass.examples.AccelerometerExample.ACCELEROMETER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
             <meta-data
