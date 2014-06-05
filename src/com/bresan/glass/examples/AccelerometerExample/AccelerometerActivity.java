@@ -23,6 +23,12 @@ public class AccelerometerActivity extends Activity {
 	private Sensor accelerometer;
 	private AccelerometerListener accelerometerListener;
 
+	private static final int xPos = 0;
+	private static final int yPos = 1;
+	private static final int zPos = 2;
+	
+	private static final int DIMENSIONS_SIZE = 3;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,13 +73,10 @@ public class AccelerometerActivity extends Activity {
 			// and dT, the event delivery rate
 
 			// each position on gravity array indicates the position on space (X, Y and Z)
-			int xPos = 0;
-			int yPos = 1;
-			int zPos = 2;
 
 			final double alpha = 0.8;
-			double gravity[] = new double[2];
-			double linearAcceleration[] = new double[2];
+			double gravity[] = new double[DIMENSIONS_SIZE];
+			double linearAcceleration[] = new double[DIMENSIONS_SIZE];
 
 			gravity[xPos] = alpha * gravity[xPos] + (1 - alpha) * event.values[xPos];
 			gravity[yPos] = alpha * gravity[yPos] + (1 - alpha) * event.values[yPos];
